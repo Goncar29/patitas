@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/registro.css">
+    <title>Patitas</title>
+</head>
+<body>
+<main>
+    <header class="header">
+        <nav class="navigator">
+            <ul>
+                <li><a href="inicio">INICIO</a></li>
+                <li><a href="encuentra">ENCUENTRA TU MASCOTA</a></li>
+                <li><a href="conocenos">CONOCENOS</a></li>
+                <div class="nav__logo">
+                    <a href="inicio"><img src="../static/img/logo.svg" height="50px" alt="logo de Patitas"></a>
+                </div>
+                <li><a href="adopta">ADOPTA UN AMIGO</a></li>
+                <li><a href="registro">CREA TU CUENTA</a></li>
+                <li><a href="login">INICIO DE SESIóN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="formulario">
+        <section class="formulario__container">
+            <form action="/login" class="form-register" method="post" autocomplete="on">
+                <div class="form-register__header">
+                    <ul class="progressbar">
+                        <li class="progressbar__option active">paso 1</li>
+                        <li class="progressbar__option">paso 2</li>
+                        <li class="progressbar__option">paso 3</li>
+                        <li class="progressbar__option">paso 4</li>
+                        <li class="progressbar__option">paso 5</li>
+                    </ul>
+                    <h1 class="form-register__title">Registro de mascota</h1>
+                </div>
+                <div class="form-register__body">
+                    <div class="step active" id="step-1">
+                        <div class="step__header">
+                            <h2 class="step__title">Hola, antes de que nada ¿Qué es lo que desea registrar?</small></h2>
+                        </div>
+                        <div class="step__body">
+                        <label for="registro">
+                            <select name="registro" class="step__input" required>
+                                <option>Adopción</option>
+                                <option>Encontrados</option>
+                            </select>
+                        </label>
+                        <div class="step__footer">
+                            <button type="button" class="step__button step__button--next" data-to_step="2" data-step="1">Siguiente</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="step" id="step-2">
+                        <div class="step__header">
+                            <h2 class="step__title">Datos básicos</h2>
+                        </div>
+                        <div class="step__body">
+                            <input type="text" placeholder="Nombre" class="step__input">
+                            <label for="especie">
+                                <select name="especie" class="step__input" required>
+                                    <option>Gato</option>
+                                    <option>Perro</option>
+                                </select>
+                            </label>
+                            <label for="sexo">
+                                <select name="sexo" class="step__input">
+                                    <option>Macho</option>
+                                    <option>Hembra</option>
+                                </select>
+                            </label>
+                            <input type="text" placeholder="Color" class="step__input">
+                            <input type="text" placeholder="Edad" class="step__input">
+                            <input type="text" placeholder="Tamaño" class="step__input">
+                        </div>
+                        <div class="step__footer">
+                            <button type="button" class="step__button step__button--back" data-to_step="1" data-step="2">Regresar</button>
+                            <button type="button" class="step__button step__button--next" data-to_step="3" data-step="2">Siguiente</button>
+                        </div>
+                    </div>
+                    <div class="step" id="step-3">
+                        <div class="step__header">
+                            <h2 class="step__title">Datos específicos</h2>
+                        </div>
+                        <div class="step__body">
+                            <input type="text" placeholder="Orejas" class="step__input">
+                            <input type="text" placeholder="Pelaje" class="step__input">
+                            <input type="text" placeholder="Manchas" class="step__input">
+                            <textarea rows="4" cols="80" placeholder="Mas Información" class="step__input"></textarea>
+                        </div>
+                        <div class="step__footer">
+                            <button type="button" class="step__button step__button--back" data-to_step="2" data-step="3">Regresar</button>
+                            <button type="button" class="step__button step__button--next" data-to_step="4" data-step="3">Siguiente</button>
+                        </div>
+                    </div>
+                    <div class="step" id="step-4">
+                        <div class="step__header">
+                            <h2 class="step__title">Datos de encuentro</small></h2>
+                        </div>
+                        <div class="step__body">
+                            <input type="text" placeholder="Lugar" class="step__input">
+                            <input type="date" placeholder="Día" class="step__input">
+                            <input type="time" placeholder="Hora" class="step__input">
+                            <textarea rows="4" cols="80" placeholder="Mas Información" class="step__input"></textarea>
+                        </div>
+                        <div class="step__footer">
+                            <button type="button" class="step__button step__button--back" data-to_step="3" data-step="4">Regresar</button>
+                            <button type="button" class="step__button step__button--next" data-to_step="5" data-step="4">Siguiente</button>
+                        </div>
+                    </div>
+                    <div class="step" id="step-5">
+                        <div class="step__header">
+                            <h2 class="step__title">Datos de contacto</small></h2>
+                        </div>
+                        <div class="step__body">
+                            <input type="text" placeholder="Nombre" class="step__input">
+                            <input type="text" placeholder="Contacto" class="step__input">
+                        </div>
+                        <div class="step__footer">
+                            <button type="button" class="step__button step__button--back" data-to_step="4" data-step="5">Regresar</button>
+                            <button type="submit" class="step__button">Guardar</button>
+                            <p>
+                                Estos datos serán públicos para que otras personas se puedan contactar con usted.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </section>
+    <script src="../static/js/app.js"></script>
+</main>
+</body>
+</html>

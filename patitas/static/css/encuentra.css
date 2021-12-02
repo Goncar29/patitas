@@ -1,0 +1,329 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'CardenioModern-Regular', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(../img/encuentra.jpeg);
+  background-size: cover;
+}
+
+/*Esto es el Nav*/
+.navigator {
+  width: 100%;
+  margin: auto;
+  background: #EAE8F3;
+  font-size: 1.5rem;
+}
+
+.navigator ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+
+.navigator ul li {
+  float: left;
+}
+
+.navigator ul li a {
+  color: #6D23AA;
+  padding: 2rem;
+  display: block;
+  text-decoration: none;
+}
+
+.navigator ul li span {
+  margin-right: 1rem;
+}
+
+.navigator ul li a:hover {
+  color: #FFA000;
+  background: #6D23AA;
+}
+
+.section__titulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5rem;
+  font-size: 2rem;
+  color: #FFA000;
+}
+
+.formulario {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.formulario .formulario__container {
+  min-width: 25%;
+  margin-top: 1rem;
+  border-color: #6D23AA;
+  border-width: 0.2rem;
+  border-style: solid;
+  background: #EAE8F3;
+  border-radius: 3rem;
+}
+
+.formulario .formulario__container h2 {
+  margin: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.formulario .formulario__container a {
+  text-decoration: none;
+}
+
+.formulario .formulario__container p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5rem;
+}
+
+.formulario .formulario__container .step__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FFA000;
+  background-color: #6D23AA;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.formulario .formulario__container .formulario__container--form ::-webkit-input-placeholder {
+  color: #FFFFFF;
+  padding: 1rem;
+}
+
+.formulario .formulario__container .formulario__container--form :-ms-input-placeholder {
+  color: #FFFFFF;
+  padding: 1rem;
+}
+
+.formulario .formulario__container .formulario__container--form ::-ms-input-placeholder {
+  color: #FFFFFF;
+  padding: 1rem;
+}
+
+.formulario .formulario__container .formulario__container--form ::placeholder {
+  color: #FFFFFF;
+  padding: 1rem;
+}
+
+.formulario .formulario__container .formulario__container--form .formulario__container--form-registro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formulario .formulario__container .formulario__container--form .formulario__container--form-registro span {
+  margin: 1rem;
+}
+
+.formulario .formulario__container .formulario__container--form .formulario__container--form-registro select {
+  width: 70%;
+  margin: 3rem;
+  height: 4rem;
+  margin-top: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  border-width: 0.1rem;
+}
+
+.formulario .formulario__container .formulario__container--form .formulario__container--form-registro select option {
+  height: 4rem;
+  margin-top: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  border-width: 0.1rem;
+}
+
+.formulario .formulario__container .formulario__container--form .formulario__container--form-registro label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formulario .formulario__container .formulario__container--form .formulario__container--form-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formulario .formulario__container .formulario__container--form .formulario__container--form-input select {
+  width: 70%;
+  height: 4rem;
+  margin-top: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  border-width: 0.1rem;
+}
+
+.formulario .formulario__container .formulario__container--form .formulario__container--form-input select option {
+  height: 4rem;
+  margin-top: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  border-width: 0.1rem;
+}
+
+.formulario .formulario__container .formulario__container--form .formulario__container--form-input label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formulario .formulario__container .formulario__container--form .formulario__container--form-input label h3 {
+  font-size: 1.5rem;
+  margin: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.formulario .formulario__container .formulario__container--form .formulario__container--form-input label input {
+  width: 70%;
+  height: 4rem;
+  margin-top: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  border-width: 0.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FFFFFF;
+}
+
+.formulario .formulario__container .formulario__container--form .formulario__container--form-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.formulario .formulario__container .formulario__container--form .formulario__container--form-button .button {
+  margin: 2rem;
+  width: 20rem;
+  height: 4rem;
+  margin-top: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  border-width: 0.1rem;
+  background-color: #6D23AA;
+  color: #FFA000;
+}
+
+.formulario .formulario__container .formulario__container--form .formulario__container--form-button .button:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=encuentra.css.map */

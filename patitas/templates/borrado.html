@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <title>Patitas</title>
+</head>
+<body>
+<main>
+    <header class="header">
+        <nav class="navigator">
+            <ul>
+                <li><a href="inicio.html">INICIO</a></li>
+                <li><a href="encuentra.html">ENCUENTRA TU MASCOTA</a></li>
+                <li><a href="conocenos.html">CONOCENOS</a></li>
+                <div class="nav__logo">
+                    <a href="inicio.html"><img src="../static/img/logo.svg" height="50px" alt="logo de Patitas"></a>
+                </div>
+                <li><a href="adopta.html">ADOPTA UN AMIGO</a></li>
+                <li><a href="formulario.html">CREA TU CUENTA</a></li>
+                <li><a href="login.html">INICIO DE SESIóN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="login">
+        <section class="login__container">
+            <div class="login__container--titulo"><h2>Borrar de usuario</h2></div>
+            <form class="login__container--form" action="/login" method="POST" autocomplete="on">
+                <div class="login__container--form-input">
+                    <input type="email" class="input" placeholder="Ingrese email" name="email" required>
+                    <input type="password" class="input" placeholder="Ingrese contraseña" name="password" required>   
+                </div>
+                <div class="login__container--form-button">
+                    <button type="submit" class="button">Borrar</button>
+                </div>
+            </form>
+            {% if error %}
+            <p><strong>Error:</strong>{{ error }}</p>
+            {% endif %}
+            <p class="login__container--register">¿Aún no tienes ninguna cuenta? <a href="formulario.html"> Regístrate</a></p>
+        </section>
+    </section>
+</main>
+</body>
+</html>

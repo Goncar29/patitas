@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <title>Patitas</title>
+</head>
+<body class="header">
+<main>
+    <header class="header">
+        <nav class="navigator">
+            <ul>
+                <li><a href="inicio">INICIO</a></li>
+                <li><a href="encuentra">ENCUENTRA TU MASCOTA</a></li>
+                <li><a href="conocenos">CONOCENOS</a></li>
+                <div class="nav__logo">
+                    <a href="inicio"><img src="../static/img/logo.svg" height="50px" alt="logo de Patitas"></a>
+                </div>
+                <li><a href="adopta.">ADOPTA UN AMIGO</a></li>
+                <li><a href="formulario">CREA TU CUENTA</a></li>
+                <li><a href="login">INICIO DE SESIóN</a></li>
+            </ul>
+        </nav>
+    </header>
+<h2>Subir imagen</h2>
+
+<form action="http://127.0.0.1:5000/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="imagen"><br>
+    <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>
