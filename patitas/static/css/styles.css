@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'Cardenio-Modern';
+  src: URL('Cardenio Modern Std.ttf') format('truetype');
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Cardenio-Modern', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(../img/home.jpeg);
+  background-size: cover;
+}
+
+/*Esto es el Nav*/
+.navigator {
+  width: 100%;
+  margin: auto;
+  background: #EAE8F3;
+  font-size: 1.5rem;
+}
+
+.navigator ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+
+.navigator ul li {
+  float: left;
+}
+
+.navigator ul li a {
+  color: #6D23AA;
+  padding: 2rem;
+  display: block;
+  text-decoration: none;
+}
+
+.navigator ul li span {
+  margin-right: 1rem;
+}
+
+.navigator ul li a:hover {
+  color: #FFA000;
+  background: #6D23AA;
+}
+
+.section .section__titulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20rem;
+  font-size: 5rem;
+  color: #FFA000;
+}
+
+.section .section__bienvenidos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10rem;
+  margin-left: 10rem;
+  font-size: 4rem;
+  color: #6D23AA;
+}
+
+.section .section__parrafo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40rem;
+  margin-top: 3rem;
+  margin-left: 75rem;
+  font-size: 2rem;
+  color: #6D23AA;
+}
+
+.section .section__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 4rem;
+  margin-top: 1rem;
+  background: #6D23AA;
+  color: #FFFFFF;
+  border-radius: 1rem;
+  border-width: 0.1rem;
+  width: 20rem;
+  margin-left: 100rem;
+  font-size: 2rem;
+}
+
+.section .section__button a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=styles.css.map */

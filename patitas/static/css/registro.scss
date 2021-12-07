@@ -1,0 +1,219 @@
+$colorUno: #FFFFFF;
+$colorDos: #FFD897;
+$colorTres: #FFA000;
+$colorCuatro: #6D23AA;
+$colorCinco: #EAE8F3;
+$colorSeis: #690050;
+$colorSiete: #F9F9F9;
+$colorOcho: #00000029;
+$colorNueve: #AC6FDE;
+
+@mixin flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin button {
+    height: 4rem;
+    margin-top: 1rem;
+    background:$colorCuatro;
+    color:$colorUno;
+    border-radius: 1rem;
+    border-width: 0.1rem;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'CardenioModern-Regular', sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-image: url(../img/registro.jpeg);
+    background-size: cover;
+}
+
+/* Contenedor principal */
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    background-image: linear-gradient($colorNueve, $colorUno);
+    overflow: hidden;
+}
+
+/*Esto es el Nav*/
+.navigator {
+	width:100%;
+	margin:auto;
+    background:$colorCinco;
+    font-size: 1.5rem;
+    ul {
+        width:100%;
+        @include flex;
+        list-style:none;
+        li {
+            float:left;
+            a {
+                color:$colorCuatro;
+                padding:2rem;
+                display:block;
+                text-decoration:none;
+            }
+            span {
+                margin-right:1rem;
+            }
+            a:hover {
+                color: $colorTres;
+                background: $colorCuatro;
+            }
+        }
+    }
+}
+.formulario__container{
+    @include flex;
+    margin-top: 5rem;
+    flex-direction: column;
+}
+/* Formulario */
+.form-register {
+    padding: 2rem 1,5rem;
+    width: 100%;
+    max-width: 40rem;
+}
+
+/* Progressbar */
+.progressbar {
+    display: flex;
+    list-style: none;
+    margin-bottom: 1,3rem;
+    counter-reset: step;
+}
+
+.progressbar__option {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    position: relative;
+    &:before {
+        display: flex;
+        content: counter(step);
+        counter-increment: step;
+        width: 2rem;
+        height: 2rem;
+        background-color: $colorUno;
+        color: $colorTres;
+        margin: 0 auto .5rem;
+        border-radius: .3rem;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+    &:after {
+        display: block;
+        width: 100%;
+        height: .2rem;
+        background-color: $colorUno;
+        position: absolute;
+        top: 1rem;
+        left: -50%;
+        z-index: 1;
+    }
+    &:first-child:after {
+        content: none;
+    }
+}
+
+.progressbar__option.active:before, .progressbar__option.active:after {
+    background-color: $colorCuatro;
+}
+
+/* Título del formulario */
+.form-register__title {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* body del formulario */
+.form-register__body {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* step */
+.step {
+    background-color: $colorCinco;
+    color: $colorTres;
+    box-shadow: .5rem .5rem .5rem .2rem grey;
+    border-radius: 2rem;
+    min-width: 100%;
+    opacity: 0;
+    transition: all .2s linear;
+    .step__header {
+        @include flex;
+        padding: 2rem 1.5rem;
+        background-color: $colorCuatro;
+        border-radius: 2rem 2rem 0 0;
+    }
+    .step__title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .step__body {
+        padding: 2rem 1.5rem 0;
+    }
+    .step__input {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: .3rem;
+        border-radius: 1rem;
+    }
+    .step__footer {
+        @include flex;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        color: $colorCuatro;
+    }
+    .step__button {
+        @include flex;
+        @include button;
+        width: 70%;
+        color: $colorTres;
+    }
+}
+
+.step.active {
+    opacity: 1;
+}
+
+.step.to-left {
+    margin-left: -100%;
+}
+
+.step.inactive {
+    animation-name: scale;
+    animation-duration: .2s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}

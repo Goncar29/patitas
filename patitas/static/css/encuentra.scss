@@ -1,0 +1,202 @@
+$colorUno: #FFFFFF;
+$colorDos: #FFD897;
+$colorTres: #FFA000;
+$colorCuatro: #6D23AA;
+$colorCinco: #EAE8F3;
+$colorSeis: #690050;
+$colorSiete: #F9F9F9;
+$colorOcho: #00000029;
+$colorNueve: #AC6FDE;
+
+@mixin flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin button {
+    height: 4rem;
+    margin-top: 1rem;
+    background-color:$colorUno;
+    border-radius: 1rem;
+    border-width: 0.1rem;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'CardenioModern-Regular', sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-image: url(../img/encuentra.jpeg);
+    background-size: cover;
+}
+/*Esto es el Nav*/
+.navigator {
+	width:100%;
+	margin:auto;
+    background:$colorCinco;
+    font-size: 1.5rem;
+    ul {
+        width:100%;
+        @include flex;
+        list-style:none;
+        li {
+            float:left;
+            a {
+                color:$colorCuatro;
+                padding:2rem;
+                display:block;
+                text-decoration:none;
+            }
+            span {
+                margin-right:1rem;
+            }
+            a:hover {
+                color: $colorTres;
+                background: $colorCuatro;
+            }
+        }
+    }
+}
+.section__titulo {
+    @include flex;
+    margin: 5rem;
+    font-size: 2rem;
+    color: $colorTres;
+}
+
+.formulario {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    @include flex;
+    .formulario__container{
+        min-width: 25%;
+        margin-top: 1rem;
+        border-color: $colorCuatro;
+        border-width: 0.2rem;
+        border-style: solid;
+        background:$colorCinco;
+        border-radius: 3rem;
+        h2 {
+            margin: 3rem;
+            @include flex;
+        }
+        a {
+        text-decoration: none;
+        }
+        p{
+            @include flex; 
+            margin: 5rem;
+        }
+        .step__header {
+            @include flex;
+            color: $colorTres;
+            background-color: $colorCuatro;
+            border-radius: 2rem 2rem 0 0;
+        }
+        .formulario__container--form{
+            ::placeholder {
+                color: $colorUno;
+                padding:1rem;
+            }
+            .formulario__container--form-registro{
+                @include flex;
+                flex-direction: column;
+                span{
+                    margin: 1rem;
+                }
+                select {
+                    width: 70%;
+                    margin: 3rem;
+                    @include button;
+                    option {
+                        @include button;
+                    }
+                }
+                label {
+                    width: 100%;
+                    @include flex;
+                    flex-direction: column;
+                }
+            }
+            .formulario__container--form-input{
+                @include flex;
+                flex-direction: column;
+                select {
+                    width: 70%;
+                    @include button;
+                    option {
+                        @include button;
+                    }
+                }
+                label {
+                    width: 100%;
+                    @include flex;
+                    flex-direction: column;
+                    h3 {
+                        font-size: 1.5rem;
+                        margin: 2rem;
+                        @include flex;
+                    }
+                    input {
+                    width: 70%;
+                    @include button;
+                    @include flex;
+                    color: $colorUno;
+                    }
+                }
+            }
+            .formulario__container--form-button{
+                @include flex;
+                .button{
+                    margin: 2rem;
+                    width: 20rem;
+                    @include button;
+                    background-color: $colorCuatro;
+                    color: $colorTres;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.filtros{
+    @include flex;
+    .filtros__busquedas{
+        margin: 2rem;   
+        width: 20%;
+        height: 10rem;
+        border-radius: 2rem;
+        background-color:$colorTres;
+        display: flex;
+        align-items: center;
+        align-content: space-between;
+        .filtros__busquedas--img{
+            width: 50%;  
+            border-radius: 100%;
+            margin: 1rem;   
+        }
+        .filtros__busquedas--datos{
+            width: 5%;
+            p {
+                padding: 0.5rem;
+                color: $colorCuatro;
+                font-size: 1.2rem;
+            }
+            input {
+                width: 8rem;
+                height: auto;
+                color: $colorCuatro;
+                background-color: $colorCinco;
+                border-radius: 2rem;
+            }
+        }  
+    }
+}

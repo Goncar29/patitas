@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/web.css">
+    <title>Patitas</title>
+</head>
+<body class="header">
+<main>
+    <header class="header">
+        <nav class="navigator">
+            <ul>
+                <li><a href="inicio">INICIO</a></li>
+                <li><a href="encuentra">ENCUENTRA TU MASCOTA</a></li>
+                <li><a href="conocenos">CONOCENOS</a></li>
+                <div class="nav__logo">
+                    <a href="inicio"><img src="../static/img/logo.svg" height="50px" alt="logo de Patitas"></a>
+                </div>
+                <li><a href="adopta">ADOPTA UN AMIGO</a></li>
+                <li>{% if user_logueado %}<a href="registrar">INGRESAR MASCOTA</a> {% else %}<a href="registro">CREA TU CUENTA</a>{% endif %}</li>
+                <li>{% if user_logueado %}<a href="me">MI PERFIL</a> {% else %}<a href="login">INICIO DE SESIóN</a>{% endif %}</li>
+                {% if user_logueado %}<li><a href="logout">Logout</a></li>{% endif %}
+            </ul>
+        </nav>
+    </header>
+    <section class="section">
+        <div class="section__titulo"><h1>PATITAS</h1></div>
+<div class="section__bienvenidos"><h3>¡ Gracias por su visita !</h3></div>
+        <div class="section__parrafo"><p>Descubra todos nuestros contenidos...</p></div>
+    </section>
+</main>
+</body>
+</html>

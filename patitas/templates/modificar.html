@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <title>Patitas</title>
+</head>
+<body>
+<main>
+    <header class="header">
+        <nav class="navigator">
+            <ul>
+                <li><a href="inicio">INICIO</a></li>
+                <li><a href="encuentra">ENCUENTRA TU MASCOTA</a></li>
+                <li><a href="conocenos">CONOCENOS</a></li>
+                <div class="nav__logo">
+                    <a href="inicio"><img src="../static/img/logo.svg" height="50px" alt="logo de Patitas"></a>
+                </div>
+                <li><a href="adopta">ADOPTA UN AMIGO</a></li>
+                <li>{% if user_logueado %}<a href="registrar">INGRESAR MASCOTA</a> {% else %}<a href="registro">CREA TU CUENTA</a>{% endif %}</li>
+                <li>{% if user_logueado %}<a href="me">MI PERFIL</a> {% else %}<a href="login">INICIO DE SESIóN</a>{% endif %}</li>
+                {% if user_logueado %}<li><a href="logout">Logout</a></li>{% endif %}
+            </ul>
+        </nav>
+    </header>
+    <section class="login">
+        <section class="login__container">
+            <div class="login__container--titulo"><h2>Editar usuario</h2></div>
+            <form class="login__container--form" action="/me" method="post" autocomplete="on">
+                <div class="login__container--form-input">
+                        <input type="text" placeholder="Nombre" name="nombre" class="step__input" required value= "{{nombre}}">
+                        <input type="text" placeholder="Apellido" name="apellido" class="step__input" value= "{{apellido}}">
+                        <input type="text" placeholder="E-mail" name="email" class="step__input" required value= "{{email}}">
+                        {% if error_email %}
+                        <p><strong style="color:red">{{ error_email }}</strong></p>
+                        {% endif %}
+                        <input type="number" placeholder="Celular" name="celular" class="step__input" required value= "{{celular}}">
+                        <input type="number"  placeholder="Teléfono" name="telefono" class="step__input" value= "{{telefono}}">
+                        <input type="text"  placeholder="Nombre de usuario" name="username" class="step__input" value= "{{username}}">
+                        {% if error_username %}
+                        <p><strong style="color:red">{{ error_username }}</strong></p>
+                        {% endif %}
+                        <input type="password"  placeholder="Contraseña" name="password" class="step__input" value= "{{password}}"> 
+                </div>
+                {% if error %} 
+                {{ error }}
+                {% endif %}
+                <div class="login__container--form-button">
+                    <button type="submit" class="button">Modificar</button>
+                </div>
+            </form>
+            <p class="login__container--register"><a href="verusuarios">Ver lista de usuarios</a></p>
+            <p class="login__container--register"><a style="color=red;" href="borrarusuario">Eliminar Usuario</a></p>
+        </section>
+    </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,100 @@
+$colorUno: #FFFFFF;
+$colorDos: #FFD897;
+$colorTres: #FFA000;
+$colorCuatro: #6D23AA;
+$colorCinco: #EAE8F3;
+$colorSeis: #690050;
+$colorSiete: #F9F9F9;
+$colorOcho: #00000029;
+$colorNueve: #AC6FDE;
+
+@mixin flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin button {
+    height: 4rem;
+    margin-top: 1rem;
+    background:$colorCuatro;
+    color:$colorUno;
+    border-radius: 1rem;
+    border-width: 0.1rem;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'CardenioModern-Regular', sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-image: url(../img/home.jpeg);
+    background-size: cover;
+}
+/*Esto es el Nav*/
+.navigator {
+	width:100%;
+	margin:auto;
+    background:$colorCinco;
+    font-size: 1.5rem;
+    ul {
+        width:100%;
+        @include flex;
+        list-style:none;
+        li {
+            float:left;
+            a {
+                color:$colorCuatro;
+                padding:2rem;
+                display:block;
+                text-decoration:none;
+            }
+            span {
+                margin-right:1rem;
+            }
+            a:hover {
+                color: $colorTres;
+                background: $colorCuatro;
+            }
+        }
+    }
+}
+
+.section {
+    .section__titulo{
+        @include flex;
+        margin-top: 20rem;
+        font-size: 5rem;
+        color: $colorTres;
+    }
+    .section__bienvenidos{
+        @include flex;
+        margin-top: 10rem;
+        margin-left: 10rem;
+        font-size: 4rem;
+        color: $colorCuatro;
+    }
+    .section__parrafo{
+        @include flex;
+        width: 40rem;
+        margin-top: 3rem;
+        margin-left: 75rem;
+        font-size: 2rem;
+        color: $colorCuatro;
+    }
+    .section__button{
+        @include flex;
+        @include button;
+        width: 20rem;
+        margin-left: 100rem;
+        font-size: 2rem;
+        a{
+            text-decoration:none;
+            color: $colorUno;
+        }
+    }
+}

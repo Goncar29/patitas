@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/encuentra.css">
+    <title>Patitas</title>
+</head>
+<body class="header">
+<main>
+    <header class="header">
+        <nav class="navigator">
+            <ul>
+                <li><a href="inicio">INICIO</a></li>
+                <li><a href="encuentra">ENCUENTRA TU MASCOTA</a></li>
+                <li><a href="conocenos">CONOCENOS</a></li>
+                <div class="nav__logo">
+                    <a href="inicio"><img src="../static/img/logo.svg" height="50px" alt="logo de Patitas"></a>
+                </div>
+                <li><a href="adopta">ADOPTA UN AMIGO</a></li>
+                <li>{% if user_logueado %}<a href="registrar">INGRESAR MASCOTA</a> {% else %}<a href="registro">CREA TU CUENTA</a>{% endif %}</li>
+                <li>{% if user_logueado %}<a href="me">MI PERFIL</a> {% else %}<a href="login">INICIO DE SESIóN</a>{% endif %}</li>
+                {% if user_logueado %}<li><a href="logout">Logout</a></li>{% endif %}
+            </ul>
+        </nav>
+    </header>
+    <section class="section">
+        <div class="section__titulo"><h1>Animales encontrados</h1></div>
+    </section>
+    <section class="formulario">
+        <section class="formulario__container">
+            <div class="step__header">
+                <h2 class="step__title">Filtros</small></h2>
+            </div>
+        <form class="formulario__container--form" method="get" autocomplete="on">
+            <div div class="formulario__container--form-input">
+                <label for="especie">
+                    <select name="especie">
+                        <option disabled selected>Especie</option>
+                            <option value="G">Gato</option>
+                            <option value="P">Perro</option>
+                    </select>
+                </label>
+                <label for="sexo">
+                    <select name="sexo">
+                        <option disabled selected>Sexo</option>
+                        <option value="M">Macho</option>
+                        <option value="H">Hembra</option>
+                    </select>
+                </label>
+                <label for="edad">
+                    <select name="edad">
+                        <option disabled selected>Edad</option>
+                        <option value="A">Adulto</option>
+                        <option value="C">Cachorro</option>
+                    </select>
+                </label>
+                <label for="tamaño">
+                    <select name="tamaño">
+                        <option disabled selected>Tamaño</option>
+                        <option value="C">Mediano/Grande</option>
+                        <option value="M">Chico</option>
+                    </select>
+                </label>
+                <label for="departamento">
+                    <select name="departamento">
+                        <option disabled selected>Departamento</option>
+                        <option value="M">Montevideo</option>
+                        <option value="C">Canelones</option>
+                    </select>
+                </label>
+                <div class="formulario__container--form-button">
+                        <input class="button" type="submit" value="Buscar">
+                </div>
+            </div>
+        </form>
+    </section>
+    </section>
+    
+        {%if cantidad_mascotas==0 %}
+        <section class="filtros">
+            No se han encontrado resultados.
+        </section>
+        {% else %}
+        {% for mascota in mascotas %}
+        <section class="filtros">
+        <div class="filtros__busquedas">
+            <div class="filtros__busquedas--img">
+                <img class="imagen__mascota" src="/imagen/mascota/{{mascota.id}}" alt="foto perfil">
+            </div>
+            <div class="filtros__busquedas--datos">
+                <p>Nombre:<strong>{{mascota.nombre}}</strong></p>
+                <p>Edad:<strong>{{mascota.edad.value}}</strong></p>
+                <p>Sexo:<strong>{{mascota.sexo.value}}</strong></p>
+                <input class="button" type="button" value="Mas info">
+            </div>
+        </div>
+        </section>
+        {% endfor %}
+        {%endif%}
+    </main>
+</body>
+</html>
